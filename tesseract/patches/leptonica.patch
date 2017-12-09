@@ -1,0 +1,16 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 1c6055a..fccb555 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -47,7 +47,10 @@ set(VERSION_PLAIN ${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH})
+ 
+ option(BUILD_PROG "Build utility programs" OFF)
+ 
+-if(NOT EXISTS ${PROJECT_SOURCE_DIR}/.cppan)
++if(IOS)
++    add_definitions(-DOS_IOS)
++    set(STATIC 1)
++elseif(NOT EXISTS ${PROJECT_SOURCE_DIR}/.cppan)
+     find_package(GIF)
+     find_package(JPEG)
+     find_package(PNG)
