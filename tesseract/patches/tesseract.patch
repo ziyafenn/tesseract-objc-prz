@@ -1,0 +1,43 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 25ded3c2..06c7e7e0 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -79,7 +79,7 @@ option(BUILD_TRAINING_TOOLS "Build training tools" ON)
+ ###############################################################################
+ 
+ set(LIBRARY_TYPE SHARED)
+-if (STATIC)
++if (STATIC OR IOS)
+     set(LIBRARY_TYPE)
+ endif()
+ 
+@@ -245,13 +245,15 @@ set(tesseractmain_src
+     vs2010/tesseract/resource.h
+     vs2010/tesseract/tesseract.rc
+ )
+-add_executable                  (tesseract ${tesseractmain_src})
+-target_link_libraries           (tesseract libtesseract)
++if (NOT IOS)
++    add_executable                  (tesseract ${tesseractmain_src})
++    target_link_libraries           (tesseract libtesseract)
++endif()
+ 
+ ########################################
+ 
+ if (BUILD_TRAINING_TOOLS)
+-add_subdirectory(training)
++    add_subdirectory(training)
+ endif()
+ 
+ get_target_property(tesseract_NAME libtesseract NAME)
+@@ -259,7 +261,9 @@ get_target_property(tesseract_VERSION libtesseract VERSION)
+ get_target_property(tesseract_OUTPUT_NAME libtesseract OUTPUT_NAME)
+ configure_file(tesseract.pc.cmake ${CMAKE_CURRENT_BINARY_DIR}/tesseract.pc @ONLY)
+ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/tesseract.pc DESTINATION lib/pkgconfig)
+-install(TARGETS tesseract RUNTIME DESTINATION bin LIBRARY DESTINATION lib ARCHIVE DESTINATION lib)
++if (NOT IOS)
++    install(TARGETS tesseract RUNTIME DESTINATION bin LIBRARY DESTINATION lib ARCHIVE DESTINATION lib)
++endif()
+ install(TARGETS libtesseract EXPORT TesseractTargets RUNTIME DESTINATION bin LIBRARY DESTINATION lib ARCHIVE DESTINATION lib)
+ install(EXPORT TesseractTargets DESTINATION cmake)
+ install(FILES

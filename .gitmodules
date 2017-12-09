@@ -1,0 +1,12 @@
+[submodule "tesseract/leptonica"]
+	path = tesseract/leptonica
+	url = https://github.com/DanBloomberg/leptonica.git
+[submodule "tesseract/polly"]
+	path = tesseract/polly
+	url = https://github.com/ruslo/polly.git
+[submodule "tesseract/lib-timestamp-wiper"]
+	path = tesseract/lib-timestamp-wiper
+	url = https://github.com/stefan-sedlak/lib-timestamp-wiper.git
+[submodule "tesseract/tesseract"]
+	path = tesseract/tesseract
+	url = https://github.com/tesseract-ocr/tesseract.git
