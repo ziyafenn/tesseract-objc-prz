@@ -1,6 +1,6 @@
 PODS:
-  - tesseract-objc/code (0.5.0)
-  - tesseract-objc/eng (0.5.0):
+  - tesseract-objc/code (0.6.0)
+  - tesseract-objc/eng (0.6.0):
     - tesseract-objc/code
 
 DEPENDENCIES:
@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  tesseract-objc: f90f1a5efdd13b6358d3d1016afe72d8930f49bc
+  tesseract-objc: 494ed0e21c301714a3fcd03b0d9f31b044edb749
 
 PODFILE CHECKSUM: e5f82ad4cdc18fbeb6bcdaa0f71f546cef730ad2
 
