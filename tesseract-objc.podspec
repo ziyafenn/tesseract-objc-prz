@@ -21,6 +21,7 @@ tesseract-objc contains:
   s.subspec 'code' do |ss|
     ss.source_files = 'tesseract-objc/Classes/**/*', 'tesseract-objc/Libraries/include/**/*.h'
     ss.public_header_files = 'tesseract-objc/Classes/Tesseract.h'
+    ss.private_header_files = 'tesseract-objc/Libraries/include/**/*.h'
     ss.ios.vendored_libraries = 'tesseract-objc/Libraries/lib/ios/libleptonica.a', 'tesseract-objc/Libraries/lib/ios/libtesseract.a'
     ss.ios.frameworks = 'UIKit'
     ss.libraries = 'c++'

@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  tesseract-objc: 89b0da744777ed5908199e637b0a2c7b644ea984
+  tesseract-objc: f90f1a5efdd13b6358d3d1016afe72d8930f49bc
 
 PODFILE CHECKSUM: e5f82ad4cdc18fbeb6bcdaa0f71f546cef730ad2
 
