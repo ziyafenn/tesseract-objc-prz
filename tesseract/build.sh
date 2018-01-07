@@ -3,7 +3,7 @@
 # properties
 ROOT_DIR="$(cd $(dirname ${0}); pwd)"
 BUILD_DIR="${ROOT_DIR}/_builds"
-TOOLCHAIN=ios-nocodesign-11-1-dep-9-0-wo-armv7s-bitcode-cxx11
+TOOLCHAIN=ios-nocodesign-11-2-dep-8-0-wo-armv7s-bitcode-cxx11
 INSTALL_DIR="${ROOT_DIR}/_install/${TOOLCHAIN}"
 DEST_DIR="${ROOT_DIR}/../tesseract-objc/Libraries"
 
