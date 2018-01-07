@@ -3,7 +3,7 @@
 	url = https://github.com/DanBloomberg/leptonica.git
 [submodule "tesseract/polly"]
 	path = tesseract/polly
-	url = https://github.com/ruslo/polly.git
+	url = https://github.com/stefan-sedlak/polly.git
 [submodule "tesseract/lib-timestamp-wiper"]
 	path = tesseract/lib-timestamp-wiper
 	url = https://github.com/stefan-sedlak/lib-timestamp-wiper.git
