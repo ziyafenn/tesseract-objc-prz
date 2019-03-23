@@ -160,6 +160,7 @@ bool progress_func(int progress, int left, int right, int top, int bottom) {
         int result = tesseract->Init(self.dataPath.UTF8String, self.language.UTF8String);
         if (result == EXIT_SUCCESS) {
             _tesseract = tesseract;
+            tesseract -> SetVariable([@"tessedit_char_whitelist" cStringUsingEncoding:NSASCIIStringEncoding], [@"1234567890/." cStringUsingEncoding:NSASCIIStringEncoding]);
         } else {
             NSLog(@"Tesseract initialization has failed.");
             delete tesseract; tesseract = nullptr;
